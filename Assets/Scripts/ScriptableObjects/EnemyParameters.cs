@@ -15,7 +15,7 @@ public class EnemyParameters : CharacterParameters
 
    public float AttackRadius => attackRadius;
    public float AttackCooldown => attackCooldown;
-   public int Damage => damage;
+   public float Damage => damage;
    public LayerMask IgnoredLayers => ignoredLayers;
    
 }

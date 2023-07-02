@@ -2,13 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8da2dcfb-62fd-497c-a11b-84ebe6fdf818" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/1/d/1d12289e3116f961c07223a3aa04708e1cc992c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/6/9/69e3348f6c20d78abf780e128745e55413b9afa8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/6/d/6de8d71019e38c2d75acb79960a6874b35c9fede" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/7/e/7ea1eaf2d4c5f571f841ded8e14dc669b5a47e0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/8/a/8ada0533e8410b73e5a5dc05e332fb21828e1ad0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/d/2/d248b5ff01b2306652b02e7fe01299b2f81d5ac2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/d/9/d9787b8497e954c5f3dfffc93b71c5466481e58d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/f/b/fb595130848017245d240a5000890c223a6429fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/f/b/fbefcc04b5044947699e67f9b622804022744c48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/EnemyParameters.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/EnemyParameters.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/SpawnInfo.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/SpawnInfo.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Spawner1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Spawner1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Sphere.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zombie.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/DealDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/DealDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BulletData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BulletData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/EnemyParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/EnemyParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stats/CharacterStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stats/CharacterStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stats/EnemyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stats/EnemyStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stats/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stats/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stats/Stat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stats/Stat.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Bullet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +38,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/User/ZombieTest/ZombieWaves/Assets/Data/EnemyParameters.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EntryPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Layers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ObjectPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -25,8 +48,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BulletData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CharacterParameters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/EnemyParameters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/User/ZombieTest/ZombieWaves/Assets/Scripts/ScriptableObjects/EnemyParameters.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/EnemySpawnerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stats/CharacterStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/User/ZombieTest/ZombieWaves/Assets/Scripts/Stats/EnemyStats.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIAlwaysToCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIHealthView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,10 +109,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8176">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21280">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8176" />
+      <option name="pid" value="21280" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -116,7 +144,9 @@
       <workItem from="1688239661187" duration="607000" />
       <workItem from="1688240495579" duration="187000" />
       <workItem from="1688240793181" duration="182000" />
-      <workItem from="1688241083768" duration="2258000" />
+      <workItem from="1688241083768" duration="3390000" />
+      <workItem from="1688244634958" duration="1075000" />
+      <workItem from="1688272456844" duration="9973000" />
     </task>
     <servers />
   </component>
@@ -130,6 +160,49 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\User\ZombieTest\ZombieWaves\Assets\Scripts\Enemy\EnemySpawnController.cs" initialLine="40" containingFunctionPresentation="method 'SpawnWave'">
+            <startOffsets>
+              <option value="1119" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1190" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\User\ZombieTest\ZombieWaves\Assets\Scripts\Enemy\EnemySpawnController.cs" initialLine="41" containingFunctionPresentation="method 'SpawnWave'">
+            <startOffsets>
+              <option value="1199" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1221" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\User\ZombieTest\ZombieWaves\Assets\Scripts\Enemy\EnemySpawnController.cs" initialLine="44" containingFunctionPresentation="method 'SpawnWave'">
+            <startOffsets>
+              <option value="1287" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1318" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#UnityEngine.GameObject" memberName="gameObject" />

@@ -6,7 +6,7 @@ namespace ScriptableObjects
     public class BulletData : ScriptableObject
     {
         [SerializeField] 
-        private int damage;
+        private float damage;
         [SerializeField] 
         private GameObject bulletPrefab;
         [SerializeField] 
@@ -16,7 +16,7 @@ namespace ScriptableObjects
         [SerializeField] 
         private int bulletsPoolNum;
 
-        public int Damage => damage;
+        public float Damage => damage;
         public GameObject BulletPrefab => bulletPrefab;
         public float Speed => speed;
         public float LifeTime => lifeTime;

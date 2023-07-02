@@ -1,15 +1,20 @@
 using System;
+using UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CharacterStats : MonoBehaviour {
 	
-	public int CurrentHealth { get; set; }
+	[SerializeField] 
+	private UIHealthView healthView;
+	protected float CurrentHealth { get; set; }
+	protected float MaximumHealth { get; set; }
 
 	public virtual void Awake()
 	{
 	}
 
-	public void TakeDamage (int damage)
+	public void TakeDamage (float damage)
 	{
 		damage = Mathf.Clamp(damage, 0, int.MaxValue);
 		CurrentHealth -= damage;
@@ -18,6 +23,8 @@ public class CharacterStats : MonoBehaviour {
 		{
 			Die();
 		}
+		var fillAmount = CurrentHealth / MaximumHealth;
+		healthView.UpdateHealth(fillAmount);
 	}
 
 	public virtual void Die ()

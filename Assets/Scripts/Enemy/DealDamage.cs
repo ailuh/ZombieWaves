@@ -8,7 +8,7 @@ namespace Enemy
     {
         [SerializeField] 
         private EnemyStats _enemyStats;
-        private int _damage;
+        private float _damage;
         private float _attackDelay;
         private float _currentDelay;
         private float _radius;
@@ -35,7 +35,6 @@ namespace Enemy
                 var numColliders = Physics.OverlapSphereNonAlloc(_sphereShift, _radius, _hits, _layers);
                 if (numColliders > 0)
                 {
-                    Debug.Log(numColliders);
                     for (int i = 0; i < numColliders; i++)
                     {
                         if (_hits[i].gameObject.layer.Equals(Layers.Player))
@@ -44,19 +43,18 @@ namespace Enemy
                         }
                     }
                 }
-
                 _currentDelay = _attackDelay;
             }
             _currentDelay -= Time.deltaTime;
         }
         
-        private void OnDrawGizmosSelected()
+        /*private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(_sphereShift, _radius);
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, Vector3.forward);
-        }
+        }*/
     }
     
 }

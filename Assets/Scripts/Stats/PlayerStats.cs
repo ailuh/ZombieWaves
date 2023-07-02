@@ -6,17 +6,19 @@ public class PlayerStats : CharacterStats
 {
 	[SerializeField] 
 	private CharacterParameters characterParameters;
+	[SerializeField] 
+	private UIMainMenu mainMenu;
 	private EnemyStats _enemyStats;
 
 	public override void Awake()
 	{
 		base.Awake();
-		CurrentHealth = characterParameters.HpAmount;
+		MaximumHealth = CurrentHealth = characterParameters.HpAmount;
 	}
 
 	public override void Die()
 	{
 		base.Die();
-		//PlayerManager.instance.KillPlayer();
+		mainMenu.OnPlayerDied();
 	}
 }

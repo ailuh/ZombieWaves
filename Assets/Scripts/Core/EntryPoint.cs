@@ -22,6 +22,8 @@ namespace Core
       private EnemySpawnController spawnController;
       [SerializeField] 
       private WavesData wavesData;
+      [SerializeField]
+      private UIMainMenu mainMenu;
 
       private void Awake()
       {
@@ -30,7 +32,7 @@ namespace Core
          playerMovement.OnInit(playerControls);
          poolManager.OnInit(bulletData, spawnPoint);
          playerAttack.OnInit(poolManager);
-         spawnController.OnInit(wavesData, playerTransform);
+         spawnController.OnInit(wavesData, playerTransform, mainMenu);
       }
 
       private void OnEnable()

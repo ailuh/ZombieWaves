@@ -18,4 +18,4 @@ MonoBehaviour:
   damage: 5
   ignoredLayers:
     serializedVersion: 2
-    m_Bits: 439
+    m_Bits: 64

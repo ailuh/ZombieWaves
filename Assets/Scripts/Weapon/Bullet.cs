@@ -5,11 +5,11 @@ public class Bullet : MonoBehaviour
 {
    private float _speed;
    private float _lifeTime;
-   private int _damage;
+   private float _damage;
    private Transform _startPos;
    private Vector3 _direction;
 
-   public void SetParameters (float speed, float lifetime, int damage, Transform startTransform)
+   public void SetParameters (float speed, float lifetime, float damage, Transform startTransform)
    {
       _speed = speed;
       _lifeTime = lifetime;
