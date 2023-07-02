@@ -1,8 +1,12 @@
 using System;
 
-[Serializable]
-public class WaveInformation
+namespace Enemy
 {
-    public int WaveNumber;
-    public int ZombiesCount;
+    [Serializable]
+    public class WaveInformation
+    {
+        public int WaveNumber { set; get; }
+        public int ZombiesCount { set; get; }
+    }
 }
+

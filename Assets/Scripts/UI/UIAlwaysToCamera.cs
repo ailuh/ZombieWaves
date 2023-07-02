@@ -1,21 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UIAlwaysToCamera : MonoBehaviour
+namespace UI
 {
-    [SerializeField] 
-    private GameObject healthSprite;
-    private Camera _mainCamera;
-
-    private void Start()
-    {           
-        _mainCamera = Camera.main;
-    }
-
-    void Update()
+    public class UIAlwaysToCamera : MonoBehaviour
     {
-        healthSprite.transform.rotation = _mainCamera.transform.rotation;
+        [SerializeField] 
+        private GameObject healthSprite;
+        private Camera _mainCamera;
+
+        private void Start()
+        {           
+            _mainCamera = Camera.main;
+        }
+
+        void Update()
+        {
+            healthSprite.transform.rotation = _mainCamera.transform.rotation;
+        }
     }
 }

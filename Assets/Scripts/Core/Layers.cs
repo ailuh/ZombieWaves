@@ -2,7 +2,7 @@ namespace Core
 {
    public static class Layers
    {
-      public static int Player = 6;
-      public static int Enemy = 7;
+      public const int Player = 6;
+      public const int Enemy = 7;
    }
 }

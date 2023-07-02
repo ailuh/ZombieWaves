@@ -1,5 +1,7 @@
+using Enemy;
 using Player;
 using ScriptableObjects;
+using UI;
 using UnityEngine;
 
 namespace Core
@@ -24,14 +26,16 @@ namespace Core
       private WavesData wavesData;
       [SerializeField]
       private UIMainMenu mainMenu;
-
+      [SerializeField] 
+      private CharacterParameters characterParameters;
       private void Awake()
       {
+         var cameraMain = Camera.main;
          var playerTransform = playerAttack.transform;
          playerControls.OnInit(playerAttack);
-         playerMovement.OnInit(playerControls);
-         poolManager.OnInit(bulletData, spawnPoint);
-         playerAttack.OnInit(poolManager);
+         playerMovement.OnInit(playerControls, characterParameters.Speed, cameraMain);
+         poolManager.OnInit(bulletData, spawnPoint, playerControls, cameraMain);
+         playerAttack.OnInit(poolManager, characterParameters.AttackCooldown);
          spawnController.OnInit(wavesData, playerTransform, mainMenu);
       }
 

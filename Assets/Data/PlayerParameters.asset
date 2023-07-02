@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: PlayerParameters
   m_EditorClassIdentifier: 
   hpAmount: 100
+  attackCooldown: 0.4
+  speed: 3

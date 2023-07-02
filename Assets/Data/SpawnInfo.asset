@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wavesCounts:
   - WaveNumber: 1
-    ZombiesCount: 5
+    ZombiesCount: 10
   - WaveNumber: 2
-    ZombiesCount: 5
+    ZombiesCount: 10
   - WaveNumber: 3
-    ZombiesCount: 5
+    ZombiesCount: 20

@@ -15,6 +15,7 @@ namespace ScriptableObjects
         private float lifeTime;
         [SerializeField] 
         private int bulletsPoolNum;
+        
 
         public float Damage => damage;
         public GameObject BulletPrefab => bulletPrefab;

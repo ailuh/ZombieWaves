@@ -1,9 +1,13 @@
 using System.Collections;
+using Enemy;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIMainMenu : MonoBehaviour
+namespace UI
+{
+    public class UIMainMenu : MonoBehaviour
 {
     [SerializeField] 
     private GameObject buttonsPanel;
@@ -26,7 +30,7 @@ public class UIMainMenu : MonoBehaviour
         restart.onClick.AddListener(OnReset);
         exit.onClick.AddListener(OnExit);
         Time.timeScale = 0;
-        mainText.text = "Try to win in zombie lands!";
+        mainText.text = "Try to win in zombie land!";
     }
 
     public void SetSpawnController(EnemySpawnController spawnController) => 
@@ -47,7 +51,7 @@ public class UIMainMenu : MonoBehaviour
         buttonsPanel.SetActive(true);
         restart.gameObject.SetActive(true);
         mainText.gameObject.SetActive(true);
-        mainText.text = "You win!";
+        mainText.text = "You died!";
     }
 
     private void OnStart()
@@ -61,11 +65,12 @@ public class UIMainMenu : MonoBehaviour
     
     private void OnReset()
     {
+        SceneManager.LoadScene(sceneBuildIndex: 0);
     }
     
-    public void OnZombieDied(int remaningCount)
+    public void OnZombieDied(int remainingCount)
     {
-        zombieCounter.text = $"Zombies remaning {remaningCount}";
+        zombieCounter.text = $"Zombies remaining {remainingCount}";
     }
     
     public void OnWin()   
@@ -83,3 +88,5 @@ public class UIMainMenu : MonoBehaviour
         Application.Quit();
     }
 }
+}
+

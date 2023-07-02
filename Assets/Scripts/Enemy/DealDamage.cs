@@ -1,5 +1,5 @@
-using System;
 using Core;
+using Stats;
 using UnityEngine;
 
 namespace Enemy
@@ -7,7 +7,7 @@ namespace Enemy
     public class DealDamage : MonoBehaviour
     {
         [SerializeField] 
-        private EnemyStats _enemyStats;
+        private EnemyStats enemyStats;
         private float _damage;
         private float _attackDelay;
         private float _currentDelay;
@@ -20,10 +20,10 @@ namespace Enemy
     
         private void Awake()
         {
-            _damage = _enemyStats.EnemyParameters.Damage;
-            _radius = _enemyStats.EnemyParameters.AttackRadius;
-            _attackDelay = _enemyStats.EnemyParameters.AttackCooldown;
-            _layers = _enemyStats.EnemyParameters.IgnoredLayers;
+            _damage = enemyStats.EnemyParameters.Damage;
+            _radius = enemyStats.EnemyParameters.AttackRadius;
+            _attackDelay = enemyStats.EnemyParameters.AttackCooldown;
+            _layers = enemyStats.EnemyParameters.IgnoredLayers;
             _currentDelay = _attackDelay;
         }
 
@@ -31,7 +31,7 @@ namespace Enemy
         {
             if (_currentDelay <= 0)
             {
-                _sphereShift = transform.position + Vector3.forward;
+                _sphereShift = transform.position + new Vector3(0,0,0.5f);
                 var numColliders = Physics.OverlapSphereNonAlloc(_sphereShift, _radius, _hits, _layers);
                 if (numColliders > 0)
                 {
@@ -48,13 +48,13 @@ namespace Enemy
             _currentDelay -= Time.deltaTime;
         }
         
-        /*private void OnDrawGizmosSelected()
+        private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(_sphereShift, _radius);
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, Vector3.forward);
-        }*/
+        }
     }
     
 }

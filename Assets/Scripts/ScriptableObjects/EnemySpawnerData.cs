@@ -9,7 +9,16 @@ namespace ScriptableObjects
         private GameObject zombiePrefab;
         [SerializeField] 
         private float spawnDelay;
+        [SerializeField] 
+        private float randomRange;
+        [SerializeField] 
+        private float speed;
+        [SerializeField] 
+        private float speedRandomRange;
         public GameObject ZombiePrefab => zombiePrefab;
         public float SpawnDelay => spawnDelay;
+        public float Speed => speed;
+        public float RandomRange => randomRange;
+        public float SpeedRandomRange  => speedRandomRange;
     }
 }

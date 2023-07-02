@@ -1,24 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
+using ScriptableObjects;
+using UI;
 using UnityEngine;
 
-public class PlayerStats : CharacterStats
+namespace Stats
 {
-	[SerializeField] 
-	private CharacterParameters characterParameters;
-	[SerializeField] 
-	private UIMainMenu mainMenu;
-	private EnemyStats _enemyStats;
-
-	public override void Awake()
+	public class PlayerStats : CharacterStats
 	{
-		base.Awake();
-		MaximumHealth = CurrentHealth = characterParameters.HpAmount;
-	}
+		[SerializeField] 
+		private CharacterParameters characterParameters;
+		[SerializeField] 
+		private UIMainMenu mainMenu;
+		private EnemyStats _enemyStats;
 
-	public override void Die()
-	{
-		base.Die();
-		mainMenu.OnPlayerDied();
+		public override void Awake()
+		{
+			base.Awake();
+			MaximumHealth = CurrentHealth = characterParameters.HpAmount;
+		}
+
+		protected override void Die()
+		{
+			base.Die();
+			mainMenu.OnPlayerDied();
+		}
 	}
 }

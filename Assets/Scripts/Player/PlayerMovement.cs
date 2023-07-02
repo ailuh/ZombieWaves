@@ -1,47 +1,48 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Player;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+namespace Player
 {
-    private PlayerControls _playerControls;
-    private CharacterController _characterController;
-    private float _speed = 2f;
-    private Camera _mainCam;
+    public class PlayerMovement : MonoBehaviour
+    {
+        private PlayerControls _playerControls;
+        private CharacterController _characterController;
+        private float _speed;
+        private Camera _mainCam;
     
-    public void OnInit(PlayerControls playerControls)
-    {
-        _mainCam = Camera.main;
-        _playerControls = playerControls;
-        _characterController = GetComponent<CharacterController>();
-    }
-    
-    private void FixedUpdate()
-    {
-        Move();
-        Look();
-    }
-
-    private void Move()
-    {
-        if (_playerControls.MoveDirection != Vector2.zero)
+        public void OnInit(PlayerControls playerControls, float speed, Camera mainCamera)
         {
-            var moveDirection = new Vector3(_playerControls.MoveDirection.x, 0, _playerControls.MoveDirection.y);
-            _characterController.Move(moveDirection * (_speed * Time.fixedDeltaTime));
+            _mainCam = mainCamera;
+            _playerControls = playerControls;
+            _characterController = GetComponent<CharacterController>();
+            _speed = speed;
         }
-    }
     
-    private void Look()
-    {
-        var ray = _mainCam.ScreenPointToRay(_playerControls.LookDirection);
-        if (Physics.Raycast(ray, out var hit, 100))
+        private void FixedUpdate()
         {
-            var lookPos = hit.point;
-            var lookDir = lookPos - transform.position;
-            lookDir.y = 0;
-            transform.LookAt(transform.position + lookDir, Vector3.up);
+            Move();
+            Look();
+        }
+
+        private void Move()
+        {
+            if (_playerControls.MoveDirection != Vector2.zero)
+            {
+                var moveDirection = new Vector3(_playerControls.MoveDirection.x, 0, _playerControls.MoveDirection.y);
+                _characterController.Move(moveDirection * (_speed * Time.fixedDeltaTime));
+            }
+        }
+    
+        private void Look()
+        {
+            var ray = _mainCam.ScreenPointToRay(_playerControls.LookDirection);
+            var position = transform.position;
+            if (Physics.Raycast(ray, out var hit, 100))
+            {
+                var lookPos = hit.point;
+                var lookDir = lookPos - position;
+                lookDir.y = 0;
+                transform.LookAt(position + lookDir, Vector3.up);
+            }
         }
     }
 }
