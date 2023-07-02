@@ -23,7 +23,7 @@ namespace Enemy
             _damage = enemyStats.EnemyParameters.Damage;
             _radius = enemyStats.EnemyParameters.AttackRadius;
             _attackDelay = enemyStats.EnemyParameters.AttackCooldown;
-            _layers = enemyStats.EnemyParameters.IgnoredLayers;
+            _layers = enemyStats.EnemyParameters.Layers;
             _currentDelay = _attackDelay;
         }
 

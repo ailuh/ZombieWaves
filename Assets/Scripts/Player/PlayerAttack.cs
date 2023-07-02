@@ -21,9 +21,10 @@ namespace Player
             if (_isHoldButton)
             {
                 if (_currentCoolDown <= 0)
-                    return;
-                _objectPool.RequestBullet();
-                _currentCoolDown = _attackCoolDown;
+                {
+                    _objectPool.RequestBullet();
+                    _currentCoolDown = _attackCoolDown;
+                }
             }
             _currentCoolDown -= Time.deltaTime;
         }

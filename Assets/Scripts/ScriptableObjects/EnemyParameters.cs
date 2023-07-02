@@ -10,11 +10,11 @@ namespace ScriptableObjects
       [SerializeField]
       private int damage;
       [SerializeField]
-      private LayerMask ignoredLayers;
+      private LayerMask layers;
 
       public float AttackRadius => attackRadius;
       public float Damage => damage;
-      public LayerMask IgnoredLayers => ignoredLayers;
+      public LayerMask Layers => layers;
    
    }
 }

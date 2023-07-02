@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: EnemyParameters
   m_EditorClassIdentifier: 
   hpAmount: 25
-  attackRadius: 1.5
   attackCooldown: 0.75
+  speed: 3
+  attackRadius: 1.5
   damage: 5
-  ignoredLayers:
+  layers:
     serializedVersion: 2
     m_Bits: 64

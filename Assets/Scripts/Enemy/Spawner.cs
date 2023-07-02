@@ -23,7 +23,7 @@ namespace Enemy
         public void OnInit(Transform playerTransform)
         {
             _playerTransform = playerTransform;
-            var randomValue = enemySpawnerData.RandomRange;
+            var randomValue = enemySpawnerData.SpawnRandomRange;
             var position = transform.position;
             _minX = position.x - randomValue;
             _maxX = position.x + randomValue;

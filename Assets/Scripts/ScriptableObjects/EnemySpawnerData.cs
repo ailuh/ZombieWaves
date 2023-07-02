@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ScriptableObjects
 {
@@ -10,7 +11,7 @@ namespace ScriptableObjects
         [SerializeField] 
         private float spawnDelay;
         [SerializeField] 
-        private float randomRange;
+        private float spawnRandomRange;
         [SerializeField] 
         private float speed;
         [SerializeField] 
@@ -18,7 +19,7 @@ namespace ScriptableObjects
         public GameObject ZombiePrefab => zombiePrefab;
         public float SpawnDelay => spawnDelay;
         public float Speed => speed;
-        public float RandomRange => randomRange;
+        public float SpawnRandomRange => spawnRandomRange;
         public float SpeedRandomRange  => speedRandomRange;
     }
 }

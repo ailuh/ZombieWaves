@@ -18,7 +18,6 @@ namespace Stats
 		{
 			damage = Mathf.Clamp(damage, 0, int.MaxValue);
 			CurrentHealth -= damage;
-			Debug.Log(transform.name + " takes " + damage + " damage.");
 			if (CurrentHealth <= 0)
 			{
 				Die();
@@ -30,7 +29,6 @@ namespace Stats
 
 		protected virtual void Die()
 		{
-			Debug.Log(transform.name + " died.");
 		}
 	}
 }

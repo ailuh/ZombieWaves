@@ -63,10 +63,9 @@ namespace UI
         _spawnController.StartSpawning();
     }
     
-    private void OnReset()
-    {
+    private void OnReset() =>
         SceneManager.LoadScene(sceneBuildIndex: 0);
-    }
+    
     
     public void OnZombieDied(int remainingCount)
     {
@@ -83,10 +82,9 @@ namespace UI
         mainText.text = "Congratulation! You Win!";
     }
     
-    private void OnExit()   
-    {
+    private void OnExit() =>
         Application.Quit();
-    }
+    
 }
 }
 
