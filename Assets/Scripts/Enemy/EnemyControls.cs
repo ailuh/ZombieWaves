@@ -1,10 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Enemy
 {
-    public class EnemyMoving : MonoBehaviour
+    public class EnemyControls : MonoBehaviour
     {
         [SerializeField] 
         private NavMeshAgent meshAgent;

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Enemy;
 using Player;
 using ScriptableObjects;
 using UnityEngine;
@@ -45,7 +44,6 @@ namespace Core
                 bull.SetActive(true);
                 return;
             }
-
             CreateBullet();
         }
 

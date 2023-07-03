@@ -1,9 +1,6 @@
 using System.Collections;
-using Core;
-using Enemy;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace UI

@@ -42,7 +42,7 @@ namespace UI
         public void OnWin()
         {
             DisableInputs(true);
-            _mainMenu.OnWin();;
+            _mainMenu.OnWin();
         }
 
         public void OnPlayerDied()

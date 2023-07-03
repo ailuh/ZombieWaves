@@ -15,7 +15,7 @@ namespace Enemy
         private CharacterStats _characterStats;
         private readonly Collider[] _hits = new Collider[5];
         private Ray _ray;
-        private Vector3 _sphereShift;
+        private Vector3 _shift;
         private LayerMask _layers;
         private bool _isInputDisabled;
     
@@ -26,15 +26,16 @@ namespace Enemy
             _attackDelay = enemyStats.EnemyParameters.AttackCooldown;
             _layers = enemyStats.EnemyParameters.Layers;
             _currentDelay = _attackDelay;
+            _shift = new Vector3(0,0,0.5f);
         }
 
         private void Update()
         {
-            if (_isInputDisabled) return;;
+            if (_isInputDisabled) return;
             if (_currentDelay <= 0)
             {
-                _sphereShift = transform.position + new Vector3(0,0,0.5f);
-                var numColliders = Physics.OverlapSphereNonAlloc(_sphereShift, _radius, _hits, _layers);
+                var sphereShift = transform.position + _shift;
+                var numColliders = Physics.OverlapSphereNonAlloc(sphereShift, _radius, _hits, _layers);
                 if (numColliders > 0)
                 {
                     for (int i = 0; i < numColliders; i++)

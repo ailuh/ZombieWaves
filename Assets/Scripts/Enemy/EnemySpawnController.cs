@@ -1,9 +1,7 @@
 using System.Collections.Generic;
-using Core;
 using ScriptableObjects;
 using UI;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Enemy
 {
