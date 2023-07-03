@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class UIAlwaysToCamera : MonoBehaviour
+    public class UIImageAlwaysToPlayer : MonoBehaviour
     {
         [SerializeField] 
         private GameObject healthSprite;

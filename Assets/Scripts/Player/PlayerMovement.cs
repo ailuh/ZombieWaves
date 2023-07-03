@@ -28,7 +28,9 @@ namespace Player
             if (_playerControls.MoveDirection != Vector2.zero)
             {
                 var moveDirection = new Vector3(_playerControls.MoveDirection.x, 0, _playerControls.MoveDirection.y);
-                _characterController.Move(moveDirection * (_speed * Time.fixedDeltaTime));
+                var magnitude = Mathf.Clamp01(moveDirection.magnitude) * _speed;        
+                //_characterController.Move(moveDirection * (_speed * Time.fixedDeltaTime));
+               _characterController.SimpleMove(moveDirection * magnitude );
             }
         }
     
@@ -36,7 +38,7 @@ namespace Player
         {
             var ray = _mainCam.ScreenPointToRay(_playerControls.LookDirection);
             var position = transform.position;
-            if (Physics.Raycast(ray, out var hit, 100))
+            if (Physics.Raycast(ray, out var hit, 50))
             {
                 var lookPos = hit.point;
                 var lookDir = lookPos - position;

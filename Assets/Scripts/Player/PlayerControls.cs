@@ -24,9 +24,8 @@ namespace Player
             _buttonInput.PlayerInputs.Move.performed += OnMove;
             _buttonInput.PlayerInputs.Move.canceled += OnMoveCanceled;
             _buttonInput.PlayerInputs.Look.performed += OnLook;
-            _buttonInput.PlayerInputs.Shoot.performed += _playerAttack.OnAttack;
-            _buttonInput.PlayerInputs.Shoot.canceled += _playerAttack.OnAttackCancelled;
-
+            _buttonInput.PlayerInputs.Shoot.performed += OnAttack;
+            _buttonInput.PlayerInputs.Shoot.canceled += OnAttackCancelled;
         }
 
         public void Disable()
@@ -35,8 +34,8 @@ namespace Player
             _buttonInput.PlayerInputs.Move.performed -= OnMove;
             _buttonInput.PlayerInputs.Move.canceled -= OnMoveCanceled;
             _buttonInput.PlayerInputs.Look.performed -= OnLook;
-            _buttonInput.PlayerInputs.Shoot.performed -= _playerAttack.OnAttack;
-            _buttonInput.PlayerInputs.Shoot.canceled -= _playerAttack.OnAttackCancelled;
+            _buttonInput.PlayerInputs.Shoot.performed -= OnAttack;
+            _buttonInput.PlayerInputs.Shoot.canceled -= OnAttackCancelled;
         }
 
         private void OnMove(InputAction.CallbackContext value)
@@ -52,6 +51,16 @@ namespace Player
         private void OnLook(InputAction.CallbackContext value)
         {
             _lookDirection = value.ReadValue<Vector2>();
+        }
+        
+        private void OnAttack(InputAction.CallbackContext value)
+        {
+            _playerAttack.OnAttack();
+        }
+        
+        private void OnAttackCancelled(InputAction.CallbackContext value)
+        {
+            _playerAttack.OnAttackCancelled();
         }
         
     }

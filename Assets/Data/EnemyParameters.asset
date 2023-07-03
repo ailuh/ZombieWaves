@@ -16,7 +16,7 @@ MonoBehaviour:
   attackCooldown: 0.75
   speed: 3
   attackRadius: 1.5
-  damage: 5
+  damage: 4
   layers:
     serializedVersion: 2
     m_Bits: 64

@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e6a268d91831a4d994cfa96a5b6a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 2525157352268334461}
+  image: {fileID: 2525157352268334461}
 --- !u!1 &1296230185668805125
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -23.814}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4690721565820229093
@@ -205,8 +205,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 24.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0.69}
+  m_SizeDelta: {x: 2.07, y: 0.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2706278896626509503
 Canvas:
@@ -298,9 +298,9 @@ GameObject:
   - component: {fileID: 6765290291297059718}
   - component: {fileID: 1438643232416684982}
   - component: {fileID: 6564055219456502594}
-  - component: {fileID: 23739466196840479}
   - component: {fileID: 5385602045007753779}
-  - component: {fileID: 8993339395841212423}
+  - component: {fileID: 7951449581507925614}
+  - component: {fileID: 4801520354445096950}
   m_Layer: 7
   m_Name: Zombie
   m_TagString: Untagged
@@ -317,12 +317,12 @@ Transform:
   m_GameObject: {fileID: 8913594175130867562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.9602823, y: 0.4999919, z: -3.4270287}
-  m_LocalScale: {x: 0.58, y: 1, z: 0.53}
+  m_LocalScale: {x: 0.58, y: 1.5, z: 0.53}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3723198219094036998}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3127239685807614449
 MeshFilter:
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f333b0d2365ee0e42aad85a0b02b79c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthView: {fileID: 2261433272389072122}
+  alwaysToPlayer: {fileID: 2261433272389072122}
   enemyParameters: {fileID: 11400000, guid: 13eb534cfa39ce6499cda75eedab83ac, type: 2}
 --- !u!114 &6564055219456502594
 MonoBehaviour:
@@ -422,7 +422,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 1438643232416684982}
---- !u!54 &23739466196840479
+--- !u!114 &5385602045007753779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8913594175130867562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d886d726952e8424fbe834cb5e8c1389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshAgent: {fileID: 4801520354445096950}
+--- !u!54 &7951449581507925614
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,24 +458,11 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 36
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &5385602045007753779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8913594175130867562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d886d726952e8424fbe834cb5e8c1389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshAgent: {fileID: 8993339395841212423}
---- !u!195 &8993339395841212423
+--- !u!195 &4801520354445096950
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

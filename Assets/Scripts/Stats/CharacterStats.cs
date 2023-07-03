@@ -1,12 +1,13 @@
 using UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Stats
 {
 	public class CharacterStats : MonoBehaviour
 	{
 
-		[SerializeField] private UIHealthView healthView;
+		[FormerlySerializedAs("healthView")] [SerializeField] private UIHealthManager alwaysToPlayer;
 		protected float CurrentHealth { get; set; }
 		protected float MaximumHealth { get; set; }
 
@@ -24,7 +25,7 @@ namespace Stats
 			}
 
 			var fillAmount = CurrentHealth / MaximumHealth;
-			healthView.UpdateHealth(fillAmount);
+			alwaysToPlayer.UpdateHealth(fillAmount);
 		}
 
 		protected virtual void Die()

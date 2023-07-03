@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class UIHealthView : MonoBehaviour
+    public class UIHealthManager : MonoBehaviour
     {
         [SerializeField] 
-        private Image healthBar;
+        private Image image;
         
         public void UpdateHealth(float fillAmount)
         {
-            healthBar.fillAmount = fillAmount;
+            image.fillAmount = fillAmount;
         }
 
     }

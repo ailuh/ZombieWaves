@@ -1,6 +1,8 @@
+using Core;
 using ScriptableObjects;
 using UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Stats
 {
@@ -8,10 +10,12 @@ namespace Stats
 	{
 		[SerializeField] 
 		private CharacterParameters characterParameters;
-		[SerializeField] 
-		private UIMainMenu mainMenu;
+		private UIProvider _uiProvider;
 		private EnemyStats _enemyStats;
 
+		public void SetProvider(UIProvider uiProvider) => 
+			_uiProvider = uiProvider;
+		
 		public override void Awake()
 		{
 			base.Awake();
@@ -21,7 +25,7 @@ namespace Stats
 		protected override void Die()
 		{
 			base.Die();
-			mainMenu.OnPlayerDied();
+			_uiProvider.OnPlayerDied();
 		}
 	}
 }

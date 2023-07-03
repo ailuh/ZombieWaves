@@ -15,9 +15,10 @@ namespace Weapon
       private Vector3 _direction;
       private Transform _startPosition;
       private Camera _cameraMain;
+      private BulletPoolManager.EventHandler _onBulletHide;
 
       public void SetParameters(BulletData bulletData, PlayerControls playerControls,
-         Transform startPosition, Camera cameraMain)
+         Transform startPosition, Camera cameraMain, BulletPoolManager.EventHandler onBulletHide)
       {
          _cameraMain = cameraMain;
          _speed = bulletData.Speed;
@@ -25,6 +26,7 @@ namespace Weapon
          _damage = bulletData.Damage;
          _playerControls = playerControls;
          _startPosition = startPosition;
+         _onBulletHide = onBulletHide;
       }
    
       private void OnEnable()
@@ -32,9 +34,8 @@ namespace Weapon
          if (_startPosition != null)
          {
             var startPosition = transform.position = _startPosition.position;
-            _lifeTime = 5;
             var ray = _cameraMain.ScreenPointToRay(_playerControls.LookDirection);
-            if (Physics.Raycast(ray, out var hit, 100))
+            if (Physics.Raycast(ray, out var hit, 50))   
             {
                var lookPos = hit.point;
                var lookDir = lookPos - startPosition;
@@ -57,17 +58,16 @@ namespace Weapon
 
       private void Hide()
       {
-         gameObject.SetActive(false);
+         var go = gameObject;
+         go.SetActive(false);
+         _onBulletHide.Invoke(go);
       }
 
       private void OnTriggerEnter(Collider other)
       {
-         if (other.gameObject.layer.Equals(Layers.Enemy))
-         {
-            other.GetComponent<CharacterStats>().TakeDamage(_damage);
-            Hide();
-         }
-      
+         Hide();
+         if (other.TryGetComponent<CharacterStats>(out var characterStats))
+            characterStats.TakeDamage(_damage);
       }
    
    }

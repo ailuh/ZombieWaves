@@ -1,4 +1,5 @@
 using System.Collections;
+using Core;
 using Enemy;
 using TMPro;
 using UnityEngine;
@@ -21,8 +22,8 @@ namespace UI
     private TMP_Text mainText;
     [SerializeField] 
     private TMP_Text zombieCounter;
-
-    private EnemySpawnController _spawnController;
+    private UIProvider _uiProvider;
+    
     private void Awake()
     {
         buttonsPanel.SetActive(true);
@@ -33,10 +34,16 @@ namespace UI
         mainText.text = "Try to win in zombie land!";
     }
 
-    public void SetSpawnController(EnemySpawnController spawnController) => 
-        _spawnController = spawnController;
+    public void SetProvider(UIProvider uiProvider) => 
+        _uiProvider = uiProvider;
 
-    public IEnumerator OnWaveStarted(int waveCount)
+
+    public void OnWaveStarted(int waveCount)
+    {
+        StartCoroutine(WaveStarted(waveCount));
+    }
+    
+    private IEnumerator WaveStarted(int waveCount)
     {
         mainText.gameObject.SetActive(true);
         mainText.text = $"Wave {waveCount}";
@@ -60,11 +67,11 @@ namespace UI
         mainText.gameObject.SetActive(false);
         buttonsPanel.SetActive(false);
         Time.timeScale = 1;
-        _spawnController.StartSpawning();
+        _uiProvider.OnGameStarted();
     }
-    
+
     private void OnReset() =>
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        _uiProvider.OnReset();
     
     
     public void OnZombieDied(int remainingCount)
@@ -83,7 +90,8 @@ namespace UI
     }
     
     private void OnExit() =>
-        Application.Quit();
+        _uiProvider.Quit();
+    
     
 }
 }
