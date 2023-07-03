@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemy;
 using Player;
 using ScriptableObjects;
 using UnityEngine;
@@ -12,9 +13,9 @@ namespace Core
         private Transform _spawnPoint;
         private PlayerControls _playerControls;
         private Camera _cameraMain;
-        public delegate void EventHandler(GameObject bullet);
-        public event EventHandler OnBulletHide;
-    
+        public delegate void OnHideHandler(GameObject bullet);
+        public event OnHideHandler OnBulletHide;
+
         public void OnInit(BulletData bulletData, Transform spawnPoint, PlayerControls playerControls, Camera cameraMain)
         {
             _cameraMain = cameraMain;
@@ -27,7 +28,7 @@ namespace Core
         
         private List<GameObject> GenerateBullets(int bulletNum)
         {
-            for (int i = 0; i < bulletNum; i++)
+            for (var i = 0; i < bulletNum; i++)
             {
                 var bullet = CreateBullet();
                 _bulletPool.Add(bullet);
@@ -50,7 +51,6 @@ namespace Core
 
         private void PushBullet(GameObject bullet)
         {
-            Debug.Log("delegate works");
             bullet.SetActive(false);
             bullet.transform.SetParent(transform);
             _bulletPool.Add(bullet);

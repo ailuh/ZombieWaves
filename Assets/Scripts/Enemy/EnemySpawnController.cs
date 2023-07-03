@@ -14,12 +14,13 @@ namespace Enemy
         private WavesData _wavesData;
         private int _currentWave;
         private int _currentWaveKills;
-        private UnityAction _diedZombiesNum;
+        public delegate void OnDiedHandler();
+        public event OnDiedHandler OnZombieDied;
         private int _currentWaveCount;
 
         public void OnInit(WavesData wavesData, Transform playerTransform, UIProvider uiProvider)
         {
-            _diedZombiesNum += AddDiedZombie;
+            OnZombieDied += AddDiedZombie;
             _wavesData = wavesData;
             _uiProvider = uiProvider;
             foreach (Transform spawner in transform)
@@ -44,7 +45,7 @@ namespace Enemy
             foreach (var spawner in _spawners)
             {
                 _currentWaveCount += waveCount;
-                StartCoroutine(spawner.SpawnZombies(waveCount, _diedZombiesNum));
+                StartCoroutine(spawner.SpawnZombies(waveCount, OnZombieDied));
             }
             _uiProvider.OnZombieDied(_currentWaveCount);
         }
@@ -64,6 +65,14 @@ namespace Enemy
                 _currentWaveKills = 0;
                 _currentWave++;
                 SpawnWave();
+            }
+        }
+
+        public void DisableEnemyInput(bool isDisabled)
+        {
+            foreach (var spawner in _spawners)
+            {
+                spawner.OnDisableEnemyInput(isDisabled);
             }
         }
     }

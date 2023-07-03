@@ -15,10 +15,10 @@ namespace Weapon
       private Vector3 _direction;
       private Transform _startPosition;
       private Camera _cameraMain;
-      private BulletPoolManager.EventHandler _onBulletHide;
+      private BulletPoolManager.OnHideHandler _onBulletHide;
 
       public void SetParameters(BulletData bulletData, PlayerControls playerControls,
-         Transform startPosition, Camera cameraMain, BulletPoolManager.EventHandler onBulletHide)
+         Transform startPosition, Camera cameraMain, BulletPoolManager.OnHideHandler onBulletHide)
       {
          _cameraMain = cameraMain;
          _speed = bulletData.Speed;

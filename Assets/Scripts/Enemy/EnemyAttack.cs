@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Enemy
 {
-    public class DealDamage : MonoBehaviour
+    public class EnemyAttack : MonoBehaviour
     {
         [SerializeField] 
         private EnemyStats enemyStats;
@@ -17,6 +17,7 @@ namespace Enemy
         private Ray _ray;
         private Vector3 _sphereShift;
         private LayerMask _layers;
+        private bool _isInputDisabled;
     
         private void Awake()
         {
@@ -29,6 +30,7 @@ namespace Enemy
 
         private void Update()
         {
+            if (_isInputDisabled) return;;
             if (_currentDelay <= 0)
             {
                 _sphereShift = transform.position + new Vector3(0,0,0.5f);
@@ -47,14 +49,8 @@ namespace Enemy
             }
             _currentDelay -= Time.deltaTime;
         }
-        
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawWireSphere(_sphereShift, _radius);
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, Vector3.forward);
+
+        public void OnInputDisable(bool isDisabled) => _isInputDisabled = isDisabled;
         }
-    }
     
 }

@@ -41,7 +41,7 @@ namespace Core
          playerMovement.OnInit(playerControls, characterParameters.Speed, cameraMain);
          poolManager.OnInit(bulletData, spawnPoint, playerControls, cameraMain);
          playerAttack.OnInit(poolManager, characterParameters.AttackCooldown);
-         provider.OnInit(spawnController, mainMenu);
+         provider.OnInit(spawnController, mainMenu, playerControls);
          spawnController.OnInit(wavesData, playerTransform, provider);
       }
 

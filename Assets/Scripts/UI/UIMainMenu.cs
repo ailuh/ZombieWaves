@@ -30,7 +30,6 @@ namespace UI
         start.onClick.AddListener(OnStart);
         restart.onClick.AddListener(OnReset);
         exit.onClick.AddListener(OnExit);
-        Time.timeScale = 0;
         mainText.text = "Try to win in zombie land!";
     }
 
@@ -47,14 +46,12 @@ namespace UI
     {
         mainText.gameObject.SetActive(true);
         mainText.text = $"Wave {waveCount}";
-        Time.timeScale = 1;
         yield return new WaitForSeconds(5);
         mainText.gameObject.SetActive(false);
     }
         
     public void OnPlayerDied()
     {
-        Time.timeScale = 0;
         buttonsPanel.SetActive(true);
         restart.gameObject.SetActive(true);
         mainText.gameObject.SetActive(true);
@@ -66,7 +63,6 @@ namespace UI
         start.gameObject.SetActive(false);
         mainText.gameObject.SetActive(false);
         buttonsPanel.SetActive(false);
-        Time.timeScale = 1;
         _uiProvider.OnGameStarted();
     }
 
@@ -85,7 +81,6 @@ namespace UI
         mainText.gameObject.SetActive(true);
         start.gameObject.SetActive(false);
         restart.gameObject.SetActive(true);
-        Time.timeScale = 0;
         mainText.text = "Congratulation! You Win!";
     }
     

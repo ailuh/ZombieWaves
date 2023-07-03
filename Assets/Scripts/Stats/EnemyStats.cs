@@ -1,6 +1,6 @@
 using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Events;
+using static Enemy.EnemySpawnController;
 
 namespace Stats
 {
@@ -8,7 +8,7 @@ namespace Stats
 	{
 		[SerializeField] 
 		private EnemyParameters enemyParameters;
-		private UnityAction _onDied;
+		private OnDiedHandler _onDied;
 		public EnemyParameters EnemyParameters => enemyParameters;
 		public override void Awake()
 		{
@@ -23,7 +23,7 @@ namespace Stats
 			Destroy(gameObject);
 		}
 
-		public void SetOnDied(UnityAction onDied)
+		public void SetOnDied(OnDiedHandler onDied)
 		{
 			_onDied = onDied;
 		}

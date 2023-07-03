@@ -20,7 +20,6 @@ namespace Player
 
         public void Enable()
         {
-            _buttonInput.Enable();
             _buttonInput.PlayerInputs.Move.performed += OnMove;
             _buttonInput.PlayerInputs.Move.canceled += OnMoveCanceled;
             _buttonInput.PlayerInputs.Look.performed += OnLook;
@@ -62,6 +61,14 @@ namespace Player
         {
             _playerAttack.OnAttackCancelled();
         }
-        
+
+        public void OnInputDisable(bool isDisable)
+        {
+            if (isDisable)
+                _buttonInput.Disable();
+            else
+                _buttonInput.Enable();
+        }
+
     }
 }
