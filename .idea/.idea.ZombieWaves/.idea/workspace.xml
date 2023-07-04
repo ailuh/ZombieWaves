@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da2dcfb-62fd-497c-a11b-84ebe6fdf818" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/4/4/446c1c6413c26e843760e8f48a503f0e892d899b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/e/0/e0a68c64f4ae0e8ae06629250ddcf64ce7e04c52" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/f/b/fbefcc04b5044947699e67f9b622804022744c48" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/6/9/69e3348f6c20d78abf780e128745e55413b9afa8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieWaves/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/BasicBullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/BasicBullet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/BulletPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/BulletPoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UIProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UIProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyControls.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stats/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stats/PlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="8da2dcfb-62fd-497c-a11b-84ebe6fdf818" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +145,7 @@
       <workItem from="1688375266231" duration="14737000" />
       <workItem from="1688397830495" duration="4419000" />
       <workItem from="1688402936170" duration="2615000" />
-      <workItem from="1688405730087" duration="839000" />
+      <workItem from="1688405730087" duration="848000" />
     </task>
     <servers />
   </component>
